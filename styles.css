@@ -2,11 +2,13 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+    font-family: "Heebo";
     }
 
 :root {
-  --marron-oscuro: #4C2406;  /* Marrón oscuro */
-  --marron-claro: #C79976;   /* Beige rosado */
+  --gris: #9EA6BA;  
+  --amarillo-oscuro: #E7BD38;   
+  --azul-oscuro: #232A3A;   
   font-family: "Heebo";
 }
 
@@ -16,7 +18,7 @@
   }
 
   .container-logo span{
-    color: #C79976;
+    color: var(--amarillo-oscuro);
   }
 
 .logo{
@@ -34,7 +36,7 @@
 }
 
 /*.offcanvas {
-  background-color: var(--marron-oscuro);
+  background-color: var(--gris);
   color: white;
 }
 .offcanvas .nav-link {
@@ -44,7 +46,7 @@
 }
 */
 .navbar {
-      background-color: var(--marron-oscuro);
+      background-color: var(--gris);
       display: flex;
       justify-content: flex-end;
       align-items: center;
@@ -59,14 +61,14 @@
 .navbar a {
       margin-left: 1.5rem;
       text-decoration: none;
-      color: var(--marron-claro);
+      color: var(--amarillo-oscuro);
       font-size: 20px;
       font-weight: bold;
       border-bottom: 2px solid transparent;
     }
 
 .navbar a:hover {
-      border-bottom: 2px solid var(--marron-claro);
+      border-bottom: 2px solid var(--amarillo-oscuro);
     }
 
 
@@ -85,7 +87,7 @@
 }
 
 .home{
-    background-color: var(--marron-claro);
+    background-color: var(--amarillo-oscuro);
     display: flex;
     height: 550px;
 }
@@ -101,11 +103,11 @@
 }
 
 .texto-home h1{
-    color: var(--marron-oscuro);
+    color: var(--gris);
 }
 
 .texto-home h3{
-    background-color: var(--marron-oscuro);
+    background-color: var(--gris);
     font-size: 20px;
     width: fit-content;
     height: fit-content;
@@ -165,7 +167,7 @@
     width: 28px;
     height: 28px;
     margin-bottom: 8px;
-    color: var(--marron-claro);
+    color: var(--amarillo-oscuro);
   }
 
   .stat-num {
@@ -181,7 +183,7 @@
 
 
 .about{
-    background-color:  var(--marron-oscuro);
+    background-color:  var(--gris);
     display: flex;
     align-items: center;
     height: 550px;
@@ -193,7 +195,7 @@
 }
 
 .texto-about h1{
-    color: var(--marron-claro);
+    color: var(--amarillo-oscuro);
 }
 
 .texto-about p{
@@ -215,13 +217,13 @@
 }
 
 .works{
-    background-color: var(--marron-claro);
+    background-color: var(--amarillo-oscuro);
     padding: 40px 0px 40px 0px;
 
 }
 
 .works h2{
-    color: var(--marron-oscuro);
+    color: var(--gris);
 }
 
 .works-filter {
@@ -310,16 +312,16 @@
 
 
 .contacto{
-    background-color: var(--marron-oscuro);
+    background-color: var(--gris);
 }
 
 .contacto h2{
-    color: var(--marron-claro);
+    color: var(--amarillo-oscuro);
 }
 
 .contacto {
-    color: var(--marron-claro);
-    background-color: var(--marron-oscuro);
+    color: var(--amarillo-oscuro);
+    background-color: var(--gris);
     margin: auto;
     padding: 40px 30px;
     text-align: left;
@@ -331,15 +333,15 @@
 }
 
 .contacto a{
-    color: var(--marron-claro);
+    color: var(--amarillo-oscuro);
 
 }
 
 hr {
     height: 4px;
-    color: var(--marron-claro);
-    border-color: var(--marron-claro);
-    background-color: var(--marron-claro);
+    color: var(--amarillo-oscuro);
+    border-color: var(--amarillo-oscuro);
+    background-color: var(--amarillo-oscuro);
     margin: 30px auto;
   }
 
@@ -390,7 +392,7 @@ footer {
 
 .icon-circle {
   background-color: white;
-  color: var(--marron-oscuro);
+  color: var(--gris);
   height: 45px;
   width: 45px;
   border-radius: 50%;
@@ -403,6 +405,67 @@ footer {
 .oculto{
   display: none;
 }
+
+/* Solo muestra botones en desktop, dropdown en mobile */
+/*@media (max-width: 768px) {
+  .filter-buttons {
+    display: none !important;
+  }
+}
+
+@media (min-width: 769px) {
+  .filter-dropdown {
+    display: none !important;
+  }
+}*/
+
+.filter-dropdown {
+  display: none;
+}
+
+@media (max-width: 768px) {
+
+  .works-filter {
+    display: none !important;
+  }
+
+  .filter-dropdown {
+    display: block;
+  }
+}
+
+.filter-dropdown select {
+  background-color: #EDE8E1;
+  color: var(--gris);
+  font-size: 1rem;
+  padding: 10px 15px;
+  border: 2px solid var(--gris);
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(100, 66, 46, 0.1);
+  width: 100%;
+  max-width: 320px;
+  margin: 0 auto;
+  display: block;
+  transition: all 0.3s ease;
+}
+
+.form-select option{
+   font-size: 0.8rem;
+}
+
+.filter-dropdown select:focus {
+  outline: none;
+  border-color: var(--amarillo-oscuro);
+  box-shadow: 0 0 0 3px rgba(157, 108, 79, 0.2);
+}
+
+.filter-dropdown {
+  padding: 1rem;
+  text-align: center;
+}
+
+
+
 
 
 @media screen and (max-width: 768px) {

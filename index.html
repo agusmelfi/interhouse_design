@@ -26,7 +26,7 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
 <!-- NAVBAR MOBILE -->
-<header id="nav-mobile" class="navbar p-3" style="background-color: #5e2c14;">
+<header id="nav-mobile" class="navbar p-3" style="background-color: #9EA6BA;">
   <div class="container-fluid d-flex justify-content-between align-items-center">
 
     <!-- Logo y nombre -->
@@ -35,23 +35,23 @@
     </div>
 
     <!-- Botón hamburguesa -->
-    <button class="btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#menuLateral" style="color:#C79976; background: none; border: none; font-size: 2.8rem;">
+    <button class="btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#menuLateral" style="color:#232A3A; background: none; border: none; font-size: 2.8rem;">
       ☰
     </button>
   </div>
 </header>
 
 <!-- MENU OFFCANVAS DESDE LA DERECHA -->
-<div class="offcanvas offcanvas-end custom-width" tabindex="-1" id="menuLateral" aria-labelledby="menuLateralLabel" style="background-color: #8C4C21; color: white;">
+<div class="offcanvas offcanvas-end custom-width" tabindex="-1" id="menuLateral" aria-labelledby="menuLateralLabel" style="background-color: #9EA6BA; color: white;">
   <div class="offcanvas-header">
     <img src="./assets/Logo InterhausDesign-12.png" alt="">
-    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Cerrar"></button>
+    <button type="button" class="btn-close" style="color:#232A3A;" data-bs-dismiss="offcanvas" aria-label="Cerrar"></button>
   </div>
   <div class="offcanvas-body">
     <ul class="nav flex-column">
-      <li class="nav-item"><a style="color: #C79976;" class="nav-link fs-5" href="#about">Quién soy</a>
-      <li class="nav-item"><a style="color: #C79976;" class="nav-link fs-5" href="#works">Trabajos</a></li>
-      <li class="nav-item"><a style="color: #C79976;" class="nav-link fs-5" href="#contacto">Contacto</a></li>
+      <li class="nav-item"><a style="color: #232A3A;" class="nav-link fs-5" href="#about">Quién soy</a>
+      <li class="nav-item"><a style="color: #232A3A;" class="nav-link fs-5" href="#works">Trabajos</a></li>
+      <li class="nav-item"><a style="color: #232A3A;" class="nav-link fs-5" href="#contacto">Contacto</a></li>
     </ul>
   </div>
 </div>
@@ -135,6 +135,26 @@
             <button class="filter-btn" data-category="tabla">Banquetas</button>
             <button class="filter-btn" data-category="oficina">Oficina</button>
         </div>
+                <!-- MOBILE dropdown -->
+        <div class="filter-dropdown d-md-none mb-3">
+          <label for="categorySelect" class="form-label" style="color: #9EA6BA; font-weight: 600;">
+            Filtrar por categoría:
+          </label>
+          <select class="form-select" id="categorySelect">
+            <option value="all">Todos</option>
+            <option value="baño">Baño</option>
+            <option value="casa">Casa country</option>
+            <option value="consul">Consultorio</option>
+            <option value="cocina">Cocina</option>
+            <option value="lab">Laboratorio</option>
+            <option value="living">Living/Comedor</option>
+            <option value="ofi">Oficina</option>
+            <option value="placard">Placard</option>
+            <option value="tabla">Banquetas</option>
+            <option value="oficina">Oficina</option>
+          </select>
+        </div>
+
         <div class="works-wrapper">
           <div class="d-md-none" id="prevBtn">
               <svg width="42" height="42" viewBox="0 0 24 24" fill="none">
