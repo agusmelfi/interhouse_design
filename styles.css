@@ -22,13 +22,14 @@
   }
 
 .logo{
-  padding-left: 1rem;
-  width: 200px;
-  height: 70px;
+  padding-left: 2rem;
+  width: 180px;
+  height: 60px;
 }
 
 .titulo{
     font-size: 60px;
+    color: var(--azul-oscuro);
 }
 
 .parrafo{
@@ -61,14 +62,14 @@
 .navbar a {
       margin-left: 1.5rem;
       text-decoration: none;
-      color: var(--amarillo-oscuro);
+      color: var(--azul-oscuro);
       font-size: 20px;
       font-weight: bold;
       border-bottom: 2px solid transparent;
     }
 
 .navbar a:hover {
-      border-bottom: 2px solid var(--amarillo-oscuro);
+      border-bottom: 2px solid var(--azul-oscuro);
     }
 
 
@@ -94,35 +95,28 @@
 
 
 .texto-home{
-    width: 50%;
+    width: 43%;
     padding: 3rem;
-    padding-top: 12rem;
+    padding-left: 5rem;
+    padding-top: 4rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
 
-.texto-home h1{
-    color: var(--gris);
-}
-
-.texto-home h3{
-    background-color: var(--gris);
-    font-size: 20px;
-    width: fit-content;
-    height: fit-content;
-    padding: 10px;
-    color: white;
-    font-weight: 300;
+.logo-home {
+  height: 30rem;
+  width: 20rem;
 }
 
 .texto-home p{
-   margin-top: 10px;
+    color: var(--azul-oscuro);
+    margin-top: 10px;
     font-size: 17px;
 }
 
 .img-home{
-    width: 50%;
+    width: 57%;
     background-image: url('assets/home_carpintero.jpg'); /* Cambia esto por la ruta de tu imagen */
     background-size: cover;
     background-position: center;
@@ -143,31 +137,39 @@
     display: flex;
     justify-content: center;
     gap: 40px;
-    background-color: white;
+    background-color: var(--azul-oscuro);
     padding: 20px 40px;
-    border-radius: 6px;
+    border-radius: 0px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-    width: fit-content;
+    width: 500px;
+    height: 100px;
     position: absolute;
     bottom: -60px;
     left: 50%;
     transform: translateX(-50%);
     z-index: 10;
+    color: var(--amarillo-oscuro);
   }
 
   .stat {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
     text-align: center;
     font-family: sans-serif;
   }
 
+  .stat-info{
+    display: flex;
+    flex-direction: column;
+    padding: 0.3rem;
+  }
+
   .stat img {
-    width: 28px;
-    height: 28px;
+    width: 53px;
+    height: 65px;
     margin-bottom: 8px;
-    color: var(--amarillo-oscuro);
+    padding-right: 0.3rem;
   }
 
   .stat-num {
@@ -177,7 +179,7 @@
 
   .stat-label {
     font-size: 13px;
-    color: #444;
+    color: var(--amarillo-oscuro);
   }
 
 
@@ -194,13 +196,9 @@
     margin: 2rem;
 }
 
-.texto-about h1{
-    color: var(--amarillo-oscuro);
-}
-
 .texto-about p{
     padding:1rem;
-    color: white;
+    color: var(--azul-oscuro);
 }
 
 .img-about{
@@ -222,9 +220,7 @@
 
 }
 
-.works h2{
-    color: var(--gris);
-}
+
 
 .works-filter {
   text-align: center;
@@ -315,9 +311,7 @@
     background-color: var(--gris);
 }
 
-.contacto h2{
-    color: var(--amarillo-oscuro);
-}
+
 
 .contacto {
     color: var(--amarillo-oscuro);
@@ -328,7 +322,7 @@
 }
 
 .contacto p{
-  color: white;
+  color: var(--azul-oscuro);
   font-size: large;
 }
 
@@ -336,14 +330,6 @@
     color: var(--amarillo-oscuro);
 
 }
-
-hr {
-    height: 4px;
-    color: var(--amarillo-oscuro);
-    border-color: var(--amarillo-oscuro);
-    background-color: var(--amarillo-oscuro);
-    margin: 30px auto;
-  }
 
 footer {
     text-align: center;
@@ -364,34 +350,42 @@ footer {
 }
 
 
-.img-contacto{
-    width: 50%;
-}
-
 .img-contacto img{
     width: 470px;
     height: 300px;
 }*/
 
-.contacto-primera-linea{
+.contacto-primera-linea {
   display: flex;
-  justify-content: space-around;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+}
+
+.linea-vertical {
+  width: 4px;
+  height: 380px;
+  background-color: var(--amarillo-oscuro);
+  flex-shrink: 0;
 }
 .img-contacto img{
     width: 550px;
     height: 350px;
 }
 .contacto-txt{
-  
-    width: 50%;
+    width: 35%;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
 }
 
+.img-contacto{
+    width: 60%;
+}
+
 
 .icon-circle {
-  background-color: white;
+  background-color: var(--azul-oscuro);
   color: var(--gris);
   height: 45px;
   width: 45px;
@@ -622,8 +616,8 @@ footer {
 }
 
 .offcanvas-header img{
-  width: 170px;
-  height: 70px;
+  width: 180px;
+  height: 90px;
 }
 
 @media screen and (max-width:391px){
