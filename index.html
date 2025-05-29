@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css?v=1.6">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    
+    <title>InterHaus Design</title>
+      <style>
+    /*Para que baje suave hasta el ID marcado*/
+    html {
+      scroll-behavior: smooth;
+    }
+  </style>
+</head>
+<body>
+<!-- Bootstrap CSS -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- NAVBAR MOBILE -->
+<header id="nav-mobile" class="navbar p-3" style="background-color: #5e2c14;">
+  <div class="container-fluid d-flex justify-content-between align-items-center">
+
+    <!-- Logo y nombre -->
+    <div class="container-logo d-flex align-items-center">
+      <img src="./assets/Logo InterhausDesign-12.png" alt="Logo" width="30" height="30" class="logo">
+    </div>
+
+    <!-- Botón hamburguesa -->
+    <button class="btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#menuLateral" style="color:#C79976; background: none; border: none; font-size: 2.8rem;">
+      ☰
+    </button>
+  </div>
+</header>
+
+<!-- MENU OFFCANVAS DESDE LA DERECHA -->
+<div class="offcanvas offcanvas-end custom-width" tabindex="-1" id="menuLateral" aria-labelledby="menuLateralLabel" style="background-color: #8C4C21; color: white;">
+  <div class="offcanvas-header">
+    <img src="./assets/Logo InterhausDesign-12.png" alt="">
+    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Cerrar"></button>
+  </div>
+  <div class="offcanvas-body">
+    <ul class="nav flex-column">
+      <li class="nav-item"><a style="color: #C79976;" class="nav-link fs-5" href="#about">Quién soy</a>
+      <li class="nav-item"><a style="color: #C79976;" class="nav-link fs-5" href="#works">Trabajos</a></li>
+      <li class="nav-item"><a style="color: #C79976;" class="nav-link fs-5" href="#contacto">Contacto</a></li>
+    </ul>
+  </div>
+</div>
+
+
+</header >
+
+    <header id="nav-web" class="navbar">
+      <div class="container-logo d-flex align-items-center">
+        <img src="./assets/Logo InterhausDesign-12.png" alt="Logo" width="30" height="30" class="logo">
+      </div>
+        <nav>
+            <ul>
+                <a href="#about">QUIEN SOY</a>
+                <a href="#works">TRABAJOS</a>
+                <a href="#contacto">CONTACTO</a>
+            </ul>
+        </nav>
+    </header>
+
+ <div class="puntos-matriz"></div>
+
+
+ <section class="home">
+  <div class="texto-home">
+    <h1 class="titulo">Alberto <br>Moeller</h1>
+    <h3>ARQUITECTO Y CARPINTERO</h3>
+    <p style="color: white;" class="parrafo">Diseño y construcción de muebles de melamina</p>
+  </div>
+  <div class="img-home">
+    <!-- imagen o fondo va aquí -->
+  </div>
+</section>
+
+<!-- Wrapper para posicionar correctamente la barrita -->
+<div class="stats-wrapper">
+  <div class="stats-bar">
+    <div class="stat">
+      <img src="./assets/calendar-svgrepo-com.svg" alt="Icono calendario">
+      <div class="stat-num">+15</div>
+      <div class="stat-label">años de<br>experiencia</div>
+    </div>
+    <div class="stat">
+      <img src="./assets/hammer-head-tool-fix-setting-svgrepo-com.svg" alt="Icono martillo">
+      <div class="stat-num">+300</div>
+      <div class="stat-label">proyectos<br>realizados</div>
+    </div>
+    <div class="stat">
+      <img src="./assets/ruler-svgrepo-com.svg" alt="Icono regla">
+      <div class="stat-num">+100</div>
+      <div class="stat-label">clientes<br>satisfechos</div>
+    </div>
+  </div>
+</div>
+
+<section class="about" id="about">
+  <div class="img-about">
+    <img src="assets/manos_carpintero.jpg" alt="">
+  </div>
+  <div class="texto-about">
+    <h1 class="titulo">¿QUIÉN SOY?</h1>
+    <p class="parrafo"><strong>Soy arquitecto de profesión y carpintero por vocación.</strong></p>
+    <p class="parrafo">Desde hace más de 15 años diseño y construyo muebles a medida en melamina, combinando precisión técnica con sensibilidad estética. <br>
+    Mi objetivo es crear soluciones funcionales que se adapten a cada espacio y necesidad. Trabajo de forma personalizada, acompañando a cada cliente en el proceso desde la idea inicial hasta la instalación final. <br>
+    Creo en los oficios bien hechos, en los materiales nobles y en los detalles que hacen la diferencia. Cada mueble que fabrico es una pieza única, pensada para durar y habitarse.</p>
+  </div>
+</section>
+    
+    <section class="works" id="works">
+        <h2 class="titulo" style="text-align: center;">TRABAJOS</h2>
+        <div class="works-filter">
+            <button class="filter-btn active" data-category="all">Todos</button>
+            <button class="filter-btn" data-category="bar">Bar</button>
+            <button class="filter-btn" data-category="cama">Cama</button>
+            <button class="filter-btn" data-category="oficina">Oficina</button>
+        </div>
+        <div class="works-wrapper">
+          <div class="d-md-none" id="prevBtn">
+              <svg width="42" height="42" viewBox="0 0 24 24" fill="none">
+                <path d="M16 4l-8 8 8 8" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+          </div>
+         <div class="works-grid">
+            <div class="item" data-category="bar"><img src="assets/trabajo_bar.jpg" alt="Trabajo 1"></div>
+            <div class="item" data-category="bar"><img src="assets/trabajo_baño.jpg" alt="Trabajo 2"></div>
+            <div class="item" data-category="bar"><img src="assets/trabajo_cama.jpg" alt="Trabajo 3"></div>
+            <div class="item" data-category="cama"><img src="assets/trabajo_cocina.jpg" alt="Trabajo 4"></div>
+            <div class="item" data-category="cama"><img src="assets/trabajo_escalera.jpg" alt="Trabajo 5"></div>
+            <div class="item" data-category="cama"><img src="assets/trabajo_escritorio.jpg" alt="Trabajo 6"></div>
+            <div class="item" data-category="oficina"><img src="assets/trabajo_muebledivisor.jpg" alt="Trabajo 7"></div>
+            <div class="item" data-category="oficina"><img src="assets/trabajo_muebletv.jpg" alt="Trabajo 8"></div>
+            <div class="item" data-category="oficina"><img src="assets/trabajo_placard.jpg" alt="Trabajo 9"></div>
+        </div>
+        <div class="d-md-none" id="nextBtn">
+            <svg width="42" height="42" viewBox="0 0 24 24" fill="none">
+              <path d="M8 4l8 8-8 8" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+        </div>
+    </section>
+
+    <section class="contacto" id="contacto">
+        <div class="contacto-primera-linea">
+          <div class="contacto-txt">
+            <h2 class="titulo">Trabajemos <br>juntos!</h2>
+            <p>amoeller@gmail.com</p>
+            <div>
+                <a href="https://www.instagram.com/"><i class="fab fa-instagram icon-circle"></i></a>
+                <a href="https://www.linkedin.com/feed/"><i class="fab fa-linkedin icon-circle"></i></a>
+                <a href="https://www.instagram.com/"><i class="fab fa-whatsapp icon-circle"></i></a>
+            </div>
+          </div>
+          <div class="img-contacto">
+              <img src="assets/manos_carpintero.jpg" alt="">
+          </div>
+        </div>
+         <hr>
+         
+    
+          <footer>
+            <p class="fw-regular">© 2025 - InterHaus Design. <br class="oculto"> All rights reserved. <br>
+            Design by <strong><a style="text-decoration: none; color: var(--color-muted);" href="https://melfistudioweb.com.ar/">Melfi Studio Web & Design</a></p></strong>
+          </footer>
+
+    </section>
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const offcanvasEl = document.getElementById("menuLateral");
+    const offcanvas = bootstrap.Offcanvas.getOrCreateInstance(offcanvasEl);
+
+    // 🟢 1. Siempre limpiar correctamente después de cualquier cierre
+    offcanvasEl.addEventListener('hidden.bs.offcanvas', () => {
+      // Si se había hecho scroll, mantenerlo
+      const currentHash = window.location.hash;
+      if (currentHash) {
+        const targetElement = document.querySelector(currentHash);
+        if (targetElement) {
+          targetElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      }
+
+      // Limpieza total
+      document.body.classList.remove('offcanvas-backdrop', 'modal-open');
+      document.body.style.overflow = '';
+      const backdrop = document.querySelector('.offcanvas-backdrop');
+      if (backdrop) backdrop.remove();
+    });
+
+    // 🔵 2. Manejo del clic en links del menú
+    document.querySelectorAll('#menuLateral .nav-link').forEach(link => {
+      link.addEventListener('click', function (e) {
+        e.preventDefault();
+
+        const targetId = this.getAttribute('href');
+        const targetElement = document.querySelector(targetId);
+
+        if (targetElement) {
+          offcanvas.hide();
+          history.replaceState(null, '', targetId);
+        }
+      });
+    });
+  });
+</script>
+
+
+
+
+
+    <script>
+  const filterButtons = document.querySelectorAll('.filter-btn');
+  const items = document.querySelectorAll('.works-grid .item');
+  const worksGrid = document.querySelector('.works-grid'); // ← Agregado
+
+  filterButtons.forEach(btn => {
+    btn.addEventListener('click', () => {
+      // Activar solo el botón actual
+      filterButtons.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+
+      const category = btn.getAttribute('data-category');
+
+      items.forEach(item => {
+        if (category === 'all' || item.getAttribute('data-category') === category) {
+          item.style.display = 'block';
+        } else {
+          item.style.display = 'none';
+        }
+      });
+
+      // ✅ Reiniciar scroll horizontal al cambiar filtro
+      worksGrid.scrollTo({ left: 0, behavior: 'auto' });
+    });
+  });
+</script>
+
+
+    <script>
+  const grid = document.querySelector('.works-grid');
+  const prevBtn = document.getElementById('prevBtn');
+  const nextBtn = document.getElementById('nextBtn');
+
+  prevBtn.addEventListener('click', () => {
+    grid.scrollBy({
+      left: -grid.offsetWidth,
+      behavior: 'smooth'
+    });
+  });
+
+  nextBtn.addEventListener('click', () => {
+    grid.scrollBy({
+      left: grid.offsetWidth,
+      behavior: 'smooth'
+    });
+  });
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
