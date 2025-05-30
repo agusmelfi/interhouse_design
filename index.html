@@ -170,9 +170,77 @@
       <p class="subtitle">Provincia</p>
     </div>
     <p class="parrafo">
-      -INTERDESIGN SRL , Diseño y elaboracion de equipamientos de viviendas, negocios y laboratorios (1998-2008)</p>
+      -INTERDESIGN SRL, Diseño y elaboracion de equipamientos de viviendas, negocios y laboratorios (1998-2008)</p>
   </div>
   </div>
+</section>
+
+<section id="about-mobile">
+      <div class="texto-about">
+    <h1 class="titulo">¿QUIÉN SOY?</h1></div>
+        <div class="about-filter">
+            <button class="filter-btnAbout active" data-category="arg">Argentina</button>
+            <button class="filter-btnAbout" data-category="ita">Italia</button>
+            <button class="filter-btnAbout" data-category="para">Paraguay</button>
+        </div>
+
+        <div class="about-grid">
+          <div class="item" data-category="ita">
+            <div class="card-about">
+              <div class="titles">
+                <p class="title">ITALIA</p>
+                <p class="subtitle">Milano (años 1989-1991)</p>
+              </div>
+              <p class="parrafo">
+                Estudio GPI (Grupo de Proyectacion Integral Cortesi Design) <br>
+                Obras:
+                <ul class="">
+                  <li class="">Aeropuerto Linate y Malpensa</li>
+                  <li class="">Autodromo di Monza</li>
+                  <li class="">La Rinascente</li>
+                  <li class="">Stazione Centrale Ferrovia Nord Milano</li>
+                  <li class="">Digital</li>
+                </ul>
+              </p>
+            </div>
+          </div>
+          <div class="item" data-category="arg">
+            <div class="card-about">
+              <div class="titles">
+                <p class="title">ARGENTINA</p>
+                <p class="subtitle">San Carlos de Bariloche</p>
+              </div>
+              <p class="parrafo">
+                -Jefe de Diseño Industrial INVAP (1986-1989) <br>
+                -Remodelacion Hotel LLao LLao (1991-1992) <br>
+                -Obras Particulares (1984-2025) <br>
+              </p>
+              <div class="titles">
+                <p class="subtitle">Pcia. de Santa Cruz</p>
+              </div>
+              <p class="parrafo">
+                -Barrios de Viviendas Industrializadas (Sistema americano CORAT INC) (1989-1990)
+              </p>
+              <div class="titles">
+                  <p class="subtitle">Capital Federal y Zona Norte</p>
+              </div>
+              <p class="parrafo">
+                -Equipamientos integrales de viviendas unifamiliares (2009-2025)
+              </p>
+            </div>
+            </div>
+            <div class="item" data-category="para">
+                <div class="card-about">
+                <div class="titles">
+                  <p class="title">PARAGUAY</p>
+                  <p class="subtitle">Provincia</p>
+                </div>
+                <p class="parrafo">
+                  -INTERDESIGN SRL, Diseño y elaboracion de equipamientos de viviendas, negocios y laboratorios (1998-2008)</p>
+              </div>
+            </div>
+           
+        </div>
 </section>
     
     <section class="works" id="works">
@@ -387,6 +455,38 @@
     });
   }
 </script>
+
+
+
+
+<script>
+  const filterButtonsAbout = document.querySelectorAll('.filter-btnAbout');
+  const itemsAbout = document.querySelectorAll('.about-grid .item');
+
+  function applyFilter(category) {
+    // Toggle clase activa en botones
+    filterButtonsAbout.forEach(btn =>
+      btn.classList.toggle('active', btn.dataset.category === category)
+    );
+
+    // Mostrar u ocultar items
+    itemsAbout.forEach(item => {
+      const match = category === 'all' || item.dataset.category === category;
+      item.style.display = match ? 'block' : 'none';
+    });
+  }
+
+  // Event listeners
+  filterButtonsAbout.forEach(btn =>
+    btn.addEventListener('click', () => {
+      applyFilter(btn.dataset.category);
+    })
+  );
+
+  // Mostrar Argentina al inicio
+  applyFilter('arg');
+</script>
+
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 

@@ -198,8 +198,12 @@
 
 .card-about{
   background-color: var(--amarillo-oscuro);
-  width: 400px;
+  width: 100%;
   height: 450px;
+}
+
+#about-mobile{
+  display: none;
 }
 
 .titles{
@@ -228,7 +232,9 @@
   padding: 12px;
 }
 
-
+  .about-filter {
+    display: none;
+  }
 
 .about{
     background-color:  var(--gris);
@@ -273,7 +279,7 @@
   margin-bottom: 1.5rem;
 }
 
-.filter-btn {
+.filter-btn,.filter-btnAbout {
   background: transparent;
   border: none;
   padding: 0.6rem 1.2rem;
@@ -673,3 +679,86 @@ footer {
 }
 }
 
+
+@media screen and (max-width:480px){
+    
+  #about{
+    display: none;
+  }
+  
+  #about-mobile{
+    display: block;
+  }
+
+  .about-filter {
+    display: block;
+  }
+  
+}
+
+
+.about-filter {
+  display: flex;
+  justify-content: center;
+  gap: 2%;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+
+.filter-btnAbout {
+  background: none;
+  border: none;
+  font-weight: bold;
+  color: var(--azul-oscuro);
+  font-size: 1rem;
+  padding: 10px 15px;
+  cursor: pointer;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+.filter-btnAbout::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 10%;
+  width: 80%;
+  height: 2px;
+  background-color: transparent;
+  transition: background-color 0.3s ease, width 0.3s ease;
+}
+
+.filter-btnAbout.active {
+  color: var(--azul-oscuro);
+}
+
+.filter-btnAbout.active::after {
+  background-color: var(--azul-oscuro); /* Línea negra como en la imagen */
+  width: 80%;
+}
+#about-mobile {
+  background-color: var(--gris); /* o #f1c40f si no usás variables */
+  padding: 30px 15px;
+}
+
+.about-filter {
+  background-color: var(--gris); /* o #F1C40F si no tenés una variable */
+  padding: 10px;
+  border-radius: 4px;
+}
+.about-grid {
+  background-color: transparent;
+  margin-top: 20px;
+}
+
+.about-grid .item {
+  background-color: var(--amarillo-oscuro);
+  margin-bottom: 20px;
+  height: 450px;
+}
+
+.card-about {
+  background-color: transparent;
+  padding: 0;
+  box-shadow: none;
+}
