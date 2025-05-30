@@ -182,6 +182,52 @@
     color: var(--amarillo-oscuro);
   }
 
+#about{
+   display: flex; align-items: center;
+  justify-content: center;
+  padding-top: 2rem;
+}
+.cards-container{
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.card-about{
+  background-color: var(--amarillo-oscuro);
+  width: 400px;
+  height: 450px;
+}
+
+.titles{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: var(--azul-oscuro);
+  color: var(--amarillo-oscuro);
+  padding: 10px;
+}
+
+.titles .title{
+  font-size: 28px;
+  margin: 0;
+}
+.titles .subtitle,p{
+  font-size: 18px;  
+  margin: 0;
+}
+
+.card-about .parrafo{
+  color:var(--azul-oscuro);
+  margin: 0;
+  padding: 12px;
+}
+
 
 
 .about{

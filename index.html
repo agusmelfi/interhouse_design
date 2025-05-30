@@ -31,7 +31,7 @@
 
     <!-- Logo y nombre -->
     <div class="container-logo d-flex align-items-center">
-      <img src="assets/Logo InterhausDesign-min.png" alt="Logo" width="30" height="30" class="logo">
+      <img src="assets/Logo_BARRA.png" alt="Logo" width="30" height="30" class="logo">
     </div>
 
     <!-- Botón hamburguesa -->
@@ -113,7 +113,7 @@
 </div>
 
 <section class="about" id="about">
-  <div class="img-about">
+  <!--div class="img-about">
     <img src="assets/manos_carpintero.jpg" alt="">
   </div>
   <div class="texto-about">
@@ -122,6 +122,56 @@
     <p class="parrafo">Desde hace más de 15 años diseño y construyo muebles a medida en melamina, combinando precisión técnica con sensibilidad estética. <br>
     Mi objetivo es crear soluciones funcionales que se adapten a cada espacio y necesidad. Trabajo de forma personalizada, acompañando a cada cliente en el proceso desde la idea inicial hasta la instalación final. <br>
     Creo en los oficios bien hechos, en los materiales nobles y en los detalles que hacen la diferencia. Cada mueble que fabrico es una pieza única, pensada para durar y habitarse.</p>
+  </div-->
+  <div class="cards-container">
+  <div class="card-about">
+    <div class="titles">
+      <p class="title">ITALIA</p>
+      <p class="subtitle">Milano (años 1989-1991)</p>
+    </div>
+    <p class="parrafo">
+      Estudio GPI (Grupo de Proyectacion Integral Cortesi Design) <br>
+      Obras:
+       <ul class="">
+        <li class="">Aeropuerto Linate y Malpensa</li>
+        <li class="">Autodromo di Monza</li>
+        <li class="">La Rinascente</li>
+        <li class="">Stazione Centrale Ferrovia Nord Milano</li>
+        <li class="">Digital</li>
+      </ul>
+    </p>
+  </div>
+  <div class="card-about">
+    <div class="titles">
+      <p class="title">ARGENTINA</p>
+      <p class="subtitle">San Carlos de Bariloche</p>
+    </div>
+    <p class="parrafo">
+      -Jefe de Diseño Industrial INVAP (1986-1989) <br>
+      -Remodelacion Hotel LLao LLao (1991-1992) <br>
+      -Obras Particulares (1984-2025) <br>
+    </p>
+    <div class="titles">
+      <p class="subtitle">Pcia. de Santa Cruz</p>
+    </div>
+    <p class="parrafo">
+      -Barrios de Viviendas Industrializadas (Sistema americano CORAT INC) (1989-1990)
+    </p>
+    <div class="titles">
+        <p class="subtitle">Capital Federal y Zona Norte</p>
+    </div>
+    <p class="parrafo">
+      -Equipamientos integrales de viviendas unifamiliares (2009-2025)
+    </p>
+  </div>
+  <div class="card-about">
+    <div class="titles">
+      <p class="title">PARAGUAY</p>
+      <p class="subtitle">Provincia</p>
+    </div>
+    <p class="parrafo">
+      -INTERDESIGN SRL , Diseño y elaboracion de equipamientos de viviendas, negocios y laboratorios (1998-2008)</p>
+  </div>
   </div>
 </section>
     
@@ -142,10 +192,10 @@
         </div>
                 <!-- MOBILE dropdown -->
         <div class="filter-dropdown d-md-none mb-3">
-          <label for="categorySelect" class="form-label" style="color: #9EA6BA; font-weight: 600;">
+          <label for="categorySelect" class="form-label" style="color: #232A3A; font-weight: 600;">
             Filtrar por categoría:
           </label>
-          <select class="form-select" id="categorySelect">
+          <select class="form-select" id="categorySelect" style="color: #232A3A;background-color: #9EA6BA;">
             <option value="all">Todos</option>
             <option value="baño">Baño</option>
             <option value="casa">Casa country</option>
@@ -278,55 +328,64 @@
 </script>
 
 
-
-
-
-    <script>
+<script>
   const filterButtons = document.querySelectorAll('.filter-btn');
   const items = document.querySelectorAll('.works-grid .item');
-  const worksGrid = document.querySelector('.works-grid'); // ← Agregado
+  const worksGrid = document.querySelector('.works-grid');
+  const categorySelect = document.getElementById('categorySelect'); // Para mobile
 
+  // Función general de filtrado
+  function applyFilter(category) {
+    // Activar el botón correcto
+    filterButtons.forEach(btn => {
+      btn.classList.toggle('active', btn.getAttribute('data-category') === category);
+    });
+
+    // Mostrar/Ocultar ítems
+    items.forEach(item => {
+      const match = category === 'all' || item.getAttribute('data-category') === category;
+      item.style.display = match ? 'block' : 'none';
+    });
+
+    // Reiniciar scroll horizontal
+    if (worksGrid) {
+      worksGrid.scrollTo({ left: 0, behavior: 'auto' });
+    }
+  }
+
+  // 👉 Botones de escritorio
   filterButtons.forEach(btn => {
     btn.addEventListener('click', () => {
-      // Activar solo el botón actual
-      filterButtons.forEach(b => b.classList.remove('active'));
-      btn.classList.add('active');
-
       const category = btn.getAttribute('data-category');
+      applyFilter(category);
 
-      items.forEach(item => {
-        if (category === 'all' || item.getAttribute('data-category') === category) {
-          item.style.display = 'block';
-        } else {
-          item.style.display = 'none';
-        }
-      });
-
-      // ✅ Reiniciar scroll horizontal al cambiar filtro
-      worksGrid.scrollTo({ left: 0, behavior: 'auto' });
+      // Actualizar dropdown si está presente
+      if (categorySelect) {
+        categorySelect.value = category;
+      }
     });
   });
-</script>
 
+  // 👉 Dropdown de mobile
+  if (categorySelect) {
+    categorySelect.addEventListener('change', () => {
+      applyFilter(categorySelect.value);
+    });
+  }
 
-    <script>
-  const grid = document.querySelector('.works-grid');
+  // 👉 Scroll horizontal con botones
   const prevBtn = document.getElementById('prevBtn');
   const nextBtn = document.getElementById('nextBtn');
 
-  prevBtn.addEventListener('click', () => {
-    grid.scrollBy({
-      left: -grid.offsetWidth,
-      behavior: 'smooth'
+  if (prevBtn && nextBtn && worksGrid) {
+    prevBtn.addEventListener('click', () => {
+      worksGrid.scrollBy({ left: -worksGrid.offsetWidth, behavior: 'smooth' });
     });
-  });
 
-  nextBtn.addEventListener('click', () => {
-    grid.scrollBy({
-      left: grid.offsetWidth,
-      behavior: 'smooth'
+    nextBtn.addEventListener('click', () => {
+      worksGrid.scrollBy({ left: worksGrid.offsetWidth, behavior: 'smooth' });
     });
-  });
+  }
 </script>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
