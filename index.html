@@ -111,7 +111,27 @@
     </div>
   </div>
 </div>
-
+<section class="quienes" id="quienes">
+  <div class="titulo-about">
+    <h1 class="titulo">QUIÉNES SOMOS</h1>
+  </div>
+  <div class="personas">
+    <div class="persona">
+      <img src="/assets/foto_alb.jpeg" alt="">
+      <div class="titles">
+        <p class="title">Alberto</p>
+        <p class="subtitle">Rol</p>
+      </div>
+    </div>
+    <div class="persona persona1">
+      <img src="/assets/foto_sergio.jpg" alt="">
+      <div class="titles">
+        <p class="title">Sergio</p>
+        <p class="subtitle">Rol</p>
+      </div>
+    </div>
+  </div>
+</section>
 <section class="about" id="about">
   <!--div class="img-about">
     <img src="assets/manos_carpintero.jpg" alt="">
@@ -246,7 +266,6 @@
     <section class="works" id="works">
         <h2 class="titulo" style="text-align: center;">TRABAJOS</h2>
         <div class="works-filter">
-            <button class="filter-btn active" data-category="all">Todos</button>
             <button class="filter-btn" data-category="baño">Baño</button>
             <button class="filter-btn" data-category="casa">Casa country</button>
             <button class="filter-btn" data-category="consul">Consultorio</button>
@@ -256,7 +275,6 @@
             <button class="filter-btn" data-category="ofi">Oficina</button>
             <button class="filter-btn" data-category="placard">Placard</button>
             <button class="filter-btn" data-category="tabla">Banquetas</button>
-            <button class="filter-btn" data-category="oficina">Oficina</button>
         </div>
                 <!-- MOBILE dropdown -->
         <div class="filter-dropdown d-md-none mb-3">
@@ -264,7 +282,6 @@
             Filtrar por categoría:
           </label>
           <select class="form-select" id="categorySelect" style="color: #232A3A;background-color: #9EA6BA;">
-            <option value="all">Todos</option>
             <option value="baño">Baño</option>
             <option value="casa">Casa country</option>
             <option value="consul">Consultorio</option>
@@ -395,23 +412,22 @@
   });
 </script>
 
-
 <script>
   const filterButtons = document.querySelectorAll('.filter-btn');
   const items = document.querySelectorAll('.works-grid .item');
   const worksGrid = document.querySelector('.works-grid');
   const categorySelect = document.getElementById('categorySelect'); // Para mobile
 
-  // Función general de filtrado
+  // 👉 Filtrado general sin "all"
   function applyFilter(category) {
-    // Activar el botón correcto
+    // Activar el botón correspondiente
     filterButtons.forEach(btn => {
       btn.classList.toggle('active', btn.getAttribute('data-category') === category);
     });
 
-    // Mostrar/Ocultar ítems
+    // Mostrar solo los ítems que coincidan
     items.forEach(item => {
-      const match = category === 'all' || item.getAttribute('data-category') === category;
+      const match = item.getAttribute('data-category') === category;
       item.style.display = match ? 'block' : 'none';
     });
 
@@ -427,7 +443,7 @@
       const category = btn.getAttribute('data-category');
       applyFilter(category);
 
-      // Actualizar dropdown si está presente
+      // Actualizar el dropdown si está presente
       if (categorySelect) {
         categorySelect.value = category;
       }
@@ -441,7 +457,7 @@
     });
   }
 
-  // 👉 Scroll horizontal con botones
+  // 👉 Scroll horizontal con flechas
   const prevBtn = document.getElementById('prevBtn');
   const nextBtn = document.getElementById('nextBtn');
 
@@ -454,7 +470,12 @@
       worksGrid.scrollBy({ left: worksGrid.offsetWidth, behavior: 'smooth' });
     });
   }
+
+  // 👉 Filtro por defecto (ej: baño)
+  applyFilter('baño');
+  if (categorySelect) categorySelect.value = 'baño';
 </script>
+
 
 
 
@@ -463,7 +484,7 @@
   const filterButtonsAbout = document.querySelectorAll('.filter-btnAbout');
   const itemsAbout = document.querySelectorAll('.about-grid .item');
 
-  function applyFilter(category) {
+  function applyAboutFilter(category) {
     // Toggle clase activa en botones
     filterButtonsAbout.forEach(btn =>
       btn.classList.toggle('active', btn.dataset.category === category)
@@ -479,12 +500,12 @@
   // Event listeners
   filterButtonsAbout.forEach(btn =>
     btn.addEventListener('click', () => {
-      applyFilter(btn.dataset.category);
+      applyAboutFilter(btn.dataset.category);
     })
   );
 
   // Mostrar Argentina al inicio
-  applyFilter('arg');
+  applyAboutFilter('arg');
 </script>
 
 

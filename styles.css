@@ -182,10 +182,60 @@
     color: var(--amarillo-oscuro);
   }
 
+
+#quienes{
+  display: flex;
+  flex-direction: column;
+
+  background-color: var(--gris);
+  padding-top: 2rem;
+  gap: 3rem;
+    padding-bottom: 1rem;
+}
+.personas{
+  display: flex;
+   align-items: center;
+  justify-content: center;
+  background-color: var(--gris);
+  gap: 3rem;
+}
+.titulo-about{
+  margin-top: 2rem;
+  margin-left: 2rem;
+}
+
+
+.persona{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--azul-oscuro);
+    width: 500px;
+    height: 400px;
+   
+}
+
+.persona .titles{
+ color: var(--gris);
+ background-color: transparent;
+ padding-left: 40px;
+}
+
+.persona img{
+  width: 250px;
+  height: 250px;
+}
+
+.persona1 img{
+  width: 250px;
+  height: 300px;
+}
+
 #about{
    display: flex; align-items: center;
   justify-content: center;
   padding-top: 2rem;
+  padding: 4rem;
 }
 .cards-container{
   display: flex;
@@ -193,7 +243,8 @@
   gap: 2rem;
   align-items: center;
   justify-content: center;
-  margin-top: 20px;
+  margin-top: 6rem;
+  margin-bottom: 5rem;
 }
 
 .card-about{
@@ -749,6 +800,7 @@ footer {
 .about-grid {
   background-color: transparent;
   margin-top: 20px;
+  margin-bottom: 2rem;
 }
 
 .about-grid .item {
@@ -758,7 +810,6 @@ footer {
 }
 
 .card-about {
-  background-color: transparent;
   padding: 0;
   box-shadow: none;
 }
