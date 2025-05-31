@@ -21,4 +21,4 @@ jobs:
           user: ${{ secrets.FTP_USER }}
           password: ${{ secrets.FTP_PASSWORD }}
           localDir: ./
-          remoteDir: ./
+          remoteDir: /public_html/
