@@ -412,9 +412,11 @@ footer {
     padding-top: 1rem;
 }*/
 .linea-vertical {
-  width: 3px;
+  width: 4px;
   background-color: var(--amarillo-oscuro);
-  margin: 60px 0; 
+  margin-right: 90px;
+  margin-top: 50px;
+  margin-bottom: 60px ;
 }
 
 .contacto {
@@ -424,13 +426,17 @@ footer {
 
 }
 
+.contacto a{
+  padding-left: 1.3rem;
+}
+
 .contacto-txt {
   flex: 1;
   padding: 60px;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  gap: 20px;
+  gap: 8px;
   margin-top: 0;
 }
 
@@ -442,24 +448,6 @@ footer {
 .contacto-txt p {
   font-size: 18px;
   color: var(--azul-oscuro);
-}
-
-.contact-icon {
-  display: flex;
-  gap: 15px;
-}
-
-.contact-icon a {
-  text-decoration: none;
-  background-color: var(--azul-oscuro);
-  color: var(--gris);
-  width: 35px;
-  height: 35px;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 18px;
 }
 
 .img-contacto {
@@ -474,6 +462,12 @@ footer {
   height: 70%;
   object-fit: cover;
   filter: brightness(0.9) saturate(1.1);
+}
+
+.contacto hr{
+  color: var(--azul-oscuro);
+  width: 80%;
+  height: auto;
 }
 
 footer {
@@ -671,24 +665,7 @@ footer {
   .works-grid::-webkit-scrollbar {
     display: none; 
   }
-/*
-  .contacto-primera-linea {
-    flex-direction: row;
-    align-items: center;
-  }
 
-  .contacto-txt{
-    width: 100%;
-    text-align: start;
-  }
-
-  .img-contacto img {
-    width: 100%;
-    height: auto;
-    max-width: 400px;
-    text-align: end;
-  }
-*/
   .icon-circle {
     width: 40px;
     height: 40px;
@@ -840,8 +817,4 @@ footer {
 .card-about {
   padding: 0;
   box-shadow: none;
-}
-
-.contacto hr{
-  color: var(--azul-oscuro);
 }
