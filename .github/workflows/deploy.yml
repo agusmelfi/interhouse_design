@@ -21,4 +21,4 @@ jobs:
           user: ${{ secrets.FTP_USER }}
           password: ${{ secrets.FTP_PASSWORD }}
           localDir: ./
-          remoteDir: /public_html/
+          remoteDir: domains/mediumslateblue-pigeon-487486.hostingersite.com/public_html/
