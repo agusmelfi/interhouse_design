@@ -209,7 +209,7 @@
   align-items: center;
   justify-content: center;
   background-color: var(--azul-oscuro);
-    width: 500px;
+    width: 550px;
     height: 400px;
    
 }
@@ -228,6 +228,7 @@
 .persona1 img{
   width: 250px;
   height: 300px;
+  margin-left: 2rem;
 }
 
 #about{
@@ -416,14 +417,13 @@ footer {
   background-color: var(--amarillo-oscuro);
   margin-right: 90px;
   margin-top: 50px;
-  margin-bottom: 60px ;
+  height: 350px;
 }
 
 .contacto {
   display: flex;
   width: 100%;
   background-color: var(--gris);
-
 }
 
 .contacto a{
@@ -716,6 +716,7 @@ footer {
   .persona1 img {
     width: 200px;
     height: auto;
+    margin-left: 0;
   }
 
   .persona .titles {
