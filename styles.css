@@ -280,6 +280,7 @@
   color:var(--azul-oscuro);
   margin: 0;
   padding: 12px;
+  font-weight: 300;
 }
 
   .about-filter {
