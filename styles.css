@@ -55,7 +55,7 @@
     }
 
     .navbar ul{
-      margin-top: 10px;
+      margin-top: 20px;
       margin-right: 30px;
     }
 
@@ -415,6 +415,7 @@ footer {
 .contacto {
   display: flex;
   width: 100%;
+  padding-left: 5rem;
   background-color: var(--gris);
 }
 
@@ -433,7 +434,6 @@ footer {
 }
 
 .contacto-txt h1 {
-  font-size: 48px;
   color: var(--azul-oscuro);
 }
 
@@ -442,9 +442,17 @@ footer {
   color: var(--azul-oscuro);
 }
 
+
+
+.alb p,.ser p{
+  font-size: 28px;
+}
+.alb{
+  margin-top: 20px;
+}
+
 .img-contacto {
   flex: 1;
-  position: relative;
   overflow: hidden;
   display: flex;
   align-items: center;
@@ -462,9 +470,9 @@ footer {
 .linea-vertical {
   width: 4px;
   background-color: var(--amarillo-oscuro);
-  margin-right: 90px;
+  margin-right: 30px;
   margin-top: 50px;
-  height: 350px;
+  height:550px;
 }
 
 .contacto hr {
@@ -477,6 +485,8 @@ footer {
   background-color: var(--gris);
   text-align: center;
   color: var(--azul-oscuro);
+  margin-top: 2rem;
+  margin-bottom: 3rem;
 }
 
 @media (max-width: 768px) {
@@ -494,9 +504,6 @@ footer {
     font-size: 14px;
   }
 
-  .contacto-txt h1 {
-    font-size: 28px;
-  }
 
   .contacto-txt p {
     font-size: 14px;
@@ -787,7 +794,24 @@ footer {
   .about-filter {
     display: block;
   }
-  
+  .img-contacto{
+    display: none;
+  }
+    .linea-vertical{
+      display: none;
+    }
+    .alb,.ser{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .alb p,.ser p{
+      font-size: 20px;
+    }
+    .alb{
+      margin-top: 20px;
+    }
 }
 
 
