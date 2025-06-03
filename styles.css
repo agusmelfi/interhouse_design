@@ -117,7 +117,7 @@
 
 .img-home{
     width: 57%;
-    background-image: url('assets/foto_caratula.jpg'); /* Cambia esto por la ruta de tu imagen */
+    background-image: url('assets/foto_home2.png'); /* Cambia esto por la ruta de tu imagen */
     background-size: cover;
     background-position: center;
 
@@ -850,6 +850,7 @@ footer {
 
     .alb p,.ser p{
       font-size: 20px;
+      margin-top: 0.5rem;
     }
     .alb{
       margin-top: 20px;
