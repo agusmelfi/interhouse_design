@@ -117,7 +117,7 @@
 
 .img-home{
     width: 57%;
-    background-image: url('assets/home_carpintero.jpg'); /* Cambia esto por la ruta de tu imagen */
+    background-image: url('assets/foto_caratula.jpg'); /* Cambia esto por la ruta de tu imagen */
     background-size: cover;
     background-position: center;
 
@@ -206,7 +206,7 @@
   gap: 3rem;
 }
 .titulo-about{
-  margin-top: 2rem;
+  margin-top: 4rem;
   margin-left: 2rem;
 }
 
