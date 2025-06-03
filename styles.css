@@ -754,8 +754,15 @@ footer {
     font-size:large;
   }
   #nav-mobile{
-  display: block;
-}
+    position: fixed;
+    display:block;
+    width: 100%;
+    z-index: 3;
+ }
+
+ .home{
+  padding-top: 6rem;
+ }
   #nav-web{
   display: none;
   
@@ -813,6 +820,10 @@ footer {
 
 
 @media screen and (max-width:480px){
+
+  .texto-home{
+    align-items: center;
+  }
     
   #about{
     display: none;
