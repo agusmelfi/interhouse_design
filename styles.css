@@ -2,14 +2,14 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-    font-family: "Heebo";
+    font-family: "Albert sans";
     }
 
 :root {
   --gris: #9EA6BA;  
   --amarillo-oscuro: #E7BD38;   
   --azul-oscuro: #232A3A;   
-  font-family: "albert-sans";
+  font-family: "Albert sans";
 }
 
   .offcanvas.custom-width {
