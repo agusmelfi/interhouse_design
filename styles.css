@@ -117,7 +117,7 @@
 
 .img-home{
     width: 57%;
-    background-image: url('assets/foto_home2.png'); /* Cambia esto por la ruta de tu imagen */
+    background-image: url('assets/foto_home.png'); /* Cambia esto por la ruta de tu imagen */
     background-size: cover;
     background-position: center;
 
