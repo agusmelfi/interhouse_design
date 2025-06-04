@@ -833,6 +833,11 @@ footer {
   .texto-home{
     align-items: center;
   }
+
+  .parrafo{
+    width:320px;
+    text-align:left;
+  }
     
   #about{
     display: none;
