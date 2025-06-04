@@ -431,9 +431,14 @@ footer {
   background-color: #E7BD38;
   padding: 1rem;
   margin: 1rem;
-  width: 100%;
+  width: 96%;
   height: 60%;
 
+}
+
+.items-contact{
+  display: flex;
+  padding-right: 1rem;
 }
 
 .contacto img{
