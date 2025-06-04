@@ -710,6 +710,9 @@ footer {
   .texto-about {
     margin: 1rem 0;
   }
+  .texto-about .titulo{
+    padding-left: 10px;
+  }
   .works-wrapper {
     position: relative;
     display: flex;
