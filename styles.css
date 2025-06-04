@@ -9,7 +9,7 @@
   --gris: #9EA6BA;  
   --amarillo-oscuro: #E7BD38;   
   --azul-oscuro: #232A3A;   
-  font-family: "Heebo";
+  font-family: "albert-sans";
 }
 
   .offcanvas.custom-width {
@@ -102,6 +102,7 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
+    line-height: 1.2;
 }
 
 .logo-home {
@@ -162,6 +163,7 @@
     display: flex;
     flex-direction: column;
     padding: 0.3rem;
+    line-height: 1.2;
   }
 
   .stat img {
